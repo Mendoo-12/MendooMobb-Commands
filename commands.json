@@ -1,194 +1,223 @@
-[
-  {
-    "category": "Daily & Streaks",
-    "icon": "🔥",
-    "name": "!daily",
-    "description": "Claim your stream attendance reward once per bot session while the channel is live.",
-    "details": "Reward increases with your streak · Bonus every 10 claims",
-    "visible": true
+{
+  "version": 2,
+  "site": {
+    "logo": "✦ MENDO / COMMUNITY",
+    "tag": "STREAM COMMAND DIRECTORY",
+    "title": "COMMAND CENTER.",
+    "lead": "Your stream. Your coins. Your games. Browse commands, learn the rules, and copy what you want to use in Twitch chat.",
+    "statCommands": "Commands listed",
+    "statCategories": "Categories",
+    "statThirdValue": "∞",
+    "statThird": "Ways to play",
+    "searchPlaceholder": "⌕ Search commands, games, or descriptions…",
+    "allLabel": "All",
+    "copyLabel": "Copy",
+    "note": "ℹ️ Commands and descriptions are editable by the site owner. Check command names, permissions, cooldowns and payouts against Streamer.bot before publishing. This directory is informational and does not execute commands.",
+    "footer": "Made for the MENDO community · Powered by Streamer.bot · {year}",
+    "accent": "#83d7ff",
+    "empty": "No commands found. Try another search."
   },
-  {
-    "category": "Daily & Streaks",
-    "icon": "🔥",
-    "name": "!streak",
-    "description": "Check your current attendance streak and best streak.",
-    "details": "",
-    "visible": true
-  },
-  {
-    "category": "Economy",
-    "icon": "💰",
-    "name": "!work",
-    "description": "Work to earn coins.",
-    "details": "2-minute cooldown",
-    "visible": true
-  },
-  {
-    "category": "Economy",
-    "icon": "💰",
-    "name": "!steal @user",
-    "description": "Try to steal coins from another viewer. You may get caught!",
-    "details": "50% success chance",
-    "visible": true
-  },
-  {
-    "category": "Economy",
-    "icon": "💰",
-    "name": "!give amount @user",
-    "description": "Give coins to another viewer.",
-    "details": "Check your Streamer.bot argument order",
-    "visible": true
-  },
-  {
-    "category": "Economy",
-    "icon": "💰",
-    "name": "!leaderboard",
-    "description": "See the five richest viewers.",
-    "details": "",
-    "visible": true
-  },
-  {
-    "category": "Economy",
-    "icon": "💰",
-    "name": "!points",
-    "description": "Check your coin balance or another viewer’s balance.",
-    "details": "Verify the public command alias",
-    "visible": true
-  },
-  {
-    "category": "Casino",
-    "icon": "🎰",
-    "name": "!gamble",
-    "description": "Wager coins for a chance to win.",
-    "details": "",
-    "visible": true
-  },
-  {
-    "category": "Casino",
-    "icon": "🎰",
-    "name": "!roulette",
-    "description": "Place a roulette wager.",
-    "details": "",
-    "visible": true
-  },
-  {
-    "category": "Casino",
-    "icon": "🎰",
-    "name": "!blackjack",
-    "description": "Play blackjack against the dealer.",
-    "details": "",
-    "visible": true
-  },
-  {
-    "category": "Casino",
-    "icon": "🎰",
-    "name": "!flip",
-    "description": "Bet on heads or tails.",
-    "details": "",
-    "visible": true
-  },
-  {
-    "category": "Casino",
-    "icon": "🎰",
-    "name": "!highlow",
-    "description": "Guess whether the next card is higher or lower.",
-    "details": "",
-    "visible": true
-  },
-  {
-    "category": "Lottery",
-    "icon": "🎟️",
-    "name": "!buytickets",
-    "description": "Buy tickets for the active lottery.",
-    "details": "2,000 coins per ticket · Verify command alias",
-    "visible": true
-  },
-  {
-    "category": "Lottery",
-    "icon": "🎟️",
-    "name": "!tickets",
-    "description": "See how many lottery tickets you own.",
-    "details": "Verify command alias",
-    "visible": true
-  },
-  {
-    "category": "Lottery",
-    "icon": "🎟️",
-    "name": "!lotterytotal",
-    "description": "Check the current lottery prize pool.",
-    "details": "Verify command alias",
-    "visible": true
-  },
-  {
-    "category": "Loans",
-    "icon": "🏦",
-    "name": "!loan",
-    "description": "Borrow coins from the bank.",
-    "details": "",
-    "visible": true
-  },
-  {
-    "category": "Loans",
-    "icon": "🏦",
-    "name": "!payloan",
-    "description": "Pay back an outstanding loan.",
-    "details": "",
-    "visible": true
-  },
-  {
-    "category": "Loans",
-    "icon": "🏦",
-    "name": "!debt",
-    "description": "Check outstanding debt.",
-    "details": "",
-    "visible": true
-  },
-  {
-    "category": "Loans",
-    "icon": "🏦",
-    "name": "!loans",
-    "description": "View outstanding loans, if available to viewers.",
-    "details": "",
-    "visible": true
-  },
-  {
-    "category": "Bounties",
-    "icon": "🎯",
-    "name": "!bounty @user amount",
-    "description": "Place or increase a bounty on another viewer.",
-    "details": "Minimum 75,000 coins",
-    "visible": true
-  },
-  {
-    "category": "Bounties",
-    "icon": "🎯",
-    "name": "!kill @user",
-    "description": "Attempt to claim a bounty.",
-    "details": "30-second cooldown",
-    "visible": true
-  },
-  {
-    "category": "Bounties",
-    "icon": "🎯",
-    "name": "!topkillers",
-    "description": "See the most successful bounty hunters.",
-    "details": "",
-    "visible": true
-  },
-  {
-    "category": "Duels",
-    "icon": "⚔️",
-    "name": "!duel @user amount",
-    "description": "Challenge another viewer to a coin wager.",
-    "details": "",
-    "visible": true
-  },
-  {
-    "category": "Duels",
-    "icon": "⚔️",
-    "name": "!accept",
-    "description": "Accept a pending duel challenge.",
-    "details": "",
-    "visible": true
-  }
-]
+  "categories": [
+    "Daily & Streaks",
+    "Economy",
+    "Casino",
+    "Lottery",
+    "Loans",
+    "Bounties",
+    "Duels"
+  ],
+  "commands": [
+    {
+      "category": "Daily & Streaks",
+      "icon": "🔥",
+      "name": "!daily",
+      "description": "Claim your stream attendance reward once per bot session while the channel is live.",
+      "details": "Reward increases with your streak · Bonus every 10 claims",
+      "visible": true
+    },
+    {
+      "category": "Daily & Streaks",
+      "icon": "🔥",
+      "name": "!streak",
+      "description": "Check your current attendance streak and best streak.",
+      "details": "",
+      "visible": true
+    },
+    {
+      "category": "Economy",
+      "icon": "💰",
+      "name": "!work",
+      "description": "Work to earn coins.",
+      "details": "2-minute cooldown",
+      "visible": true
+    },
+    {
+      "category": "Economy",
+      "icon": "💰",
+      "name": "!steal @user",
+      "description": "Try to steal coins from another viewer. You may get caught!",
+      "details": "50% success chance",
+      "visible": true
+    },
+    {
+      "category": "Economy",
+      "icon": "💰",
+      "name": "!give amount @user",
+      "description": "Give coins to another viewer.",
+      "details": "Check your Streamer.bot argument order",
+      "visible": true
+    },
+    {
+      "category": "Economy",
+      "icon": "💰",
+      "name": "!leaderboard",
+      "description": "See the five richest viewers.",
+      "details": "",
+      "visible": true
+    },
+    {
+      "category": "Economy",
+      "icon": "💰",
+      "name": "!points",
+      "description": "Check your coin balance or another viewer’s balance.",
+      "details": "Verify the public command alias",
+      "visible": true
+    },
+    {
+      "category": "Casino",
+      "icon": "🎰",
+      "name": "!gamble",
+      "description": "Wager coins for a chance to win.",
+      "details": "",
+      "visible": true
+    },
+    {
+      "category": "Casino",
+      "icon": "🎰",
+      "name": "!roulette",
+      "description": "Place a roulette wager.",
+      "details": "",
+      "visible": true
+    },
+    {
+      "category": "Casino",
+      "icon": "🎰",
+      "name": "!blackjack",
+      "description": "Play blackjack against the dealer.",
+      "details": "",
+      "visible": true
+    },
+    {
+      "category": "Casino",
+      "icon": "🎰",
+      "name": "!flip",
+      "description": "Bet on heads or tails.",
+      "details": "",
+      "visible": true
+    },
+    {
+      "category": "Casino",
+      "icon": "🎰",
+      "name": "!highlow",
+      "description": "Guess whether the next card is higher or lower.",
+      "details": "",
+      "visible": true
+    },
+    {
+      "category": "Lottery",
+      "icon": "🎟️",
+      "name": "!buytickets",
+      "description": "Buy tickets for the active lottery.",
+      "details": "2,000 coins per ticket · Verify command alias",
+      "visible": true
+    },
+    {
+      "category": "Lottery",
+      "icon": "🎟️",
+      "name": "!tickets",
+      "description": "See how many lottery tickets you own.",
+      "details": "Verify command alias",
+      "visible": true
+    },
+    {
+      "category": "Lottery",
+      "icon": "🎟️",
+      "name": "!lotterytotal",
+      "description": "Check the current lottery prize pool.",
+      "details": "Verify command alias",
+      "visible": true
+    },
+    {
+      "category": "Loans",
+      "icon": "🏦",
+      "name": "!loan",
+      "description": "Borrow coins from the bank.",
+      "details": "",
+      "visible": true
+    },
+    {
+      "category": "Loans",
+      "icon": "🏦",
+      "name": "!payloan",
+      "description": "Pay back an outstanding loan.",
+      "details": "",
+      "visible": true
+    },
+    {
+      "category": "Loans",
+      "icon": "🏦",
+      "name": "!debt",
+      "description": "Check outstanding debt.",
+      "details": "",
+      "visible": true
+    },
+    {
+      "category": "Loans",
+      "icon": "🏦",
+      "name": "!loans",
+      "description": "View outstanding loans, if available to viewers.",
+      "details": "",
+      "visible": true
+    },
+    {
+      "category": "Bounties",
+      "icon": "🎯",
+      "name": "!bounty @user amount",
+      "description": "Place or increase a bounty on another viewer.",
+      "details": "Minimum 75,000 coins",
+      "visible": true
+    },
+    {
+      "category": "Bounties",
+      "icon": "🎯",
+      "name": "!kill @user",
+      "description": "Attempt to claim a bounty.",
+      "details": "30-second cooldown",
+      "visible": true
+    },
+    {
+      "category": "Bounties",
+      "icon": "🎯",
+      "name": "!topkillers",
+      "description": "See the most successful bounty hunters.",
+      "details": "",
+      "visible": true
+    },
+    {
+      "category": "Duels",
+      "icon": "⚔️",
+      "name": "!duel @user amount",
+      "description": "Challenge another viewer to a coin wager.",
+      "details": "",
+      "visible": true
+    },
+    {
+      "category": "Duels",
+      "icon": "⚔️",
+      "name": "!accept",
+      "description": "Accept a pending duel challenge.",
+      "details": "",
+      "visible": true
+    }
+  ]
+}

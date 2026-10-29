@@ -1,28 +1,12 @@
-# MENDO Command Center — Editable GitHub Pages version
+# MENDO Command Center — Full Control Edition
 
-A static public command directory with an owner-side editor. The editor writes `commands.json` to GitHub using the GitHub Contents API. **No backend is required.**
+Upload **index.html**, **app.js**, and **commands.json** to the root of your GitHub Pages repository. Replace all three files from earlier editions (this version changes commands.json to an object with site settings, categories, and commands).
 
-## Publish (do this first)
-1. Create a **public** GitHub repository, for example `mendo-commands`.
-2. Upload `index.html`, `app.js`, and `commands.json` to the **root** of the repository (not inside a folder).
-3. Open **Settings → Pages → Build and deployment → Deploy from a branch**; choose `main` and `/ (root)`.
-4. Wait for your GitHub Pages URL, typically `https://YOURNAME.github.io/mendo-commands/`.
+## Editor
+Open Admin. Drag ☰ in the **Command order** list while Show = All to set the global order, or filter by category and drag to reorder within that category. Drag categories to change tab order. Rename categories in place; deleting a nonempty category is blocked until its commands are moved or deleted. Edit website labels, small print, footer, hero copy, accent color, descriptions, command cards and visibility. Click Apply website changes to preview text changes. Click Save & Publish to update commands.json in GitHub. The public sort dropdown defaults to My custom order; A–Z sorting remains optional.
 
-## Edit from your website
-1. Open the published website and click **Admin**.
-2. Enter your GitHub username and repository name.
-3. Create a GitHub **fine-grained personal access token** at https://github.com/settings/personal-access-tokens/new, scoped to **only this repository**, with **Repository permissions → Contents → Read and write**. No other permissions are required beyond GitHub's automatic Metadata read permission.
-4. Paste the token into the editor. The token is held only in the page's memory and never saved to localStorage, cookies, or the repository. Use your own trusted device. GitHub Pages is public; **the editor UI is visible to everyone, but GitHub rejects publishing without an authorized token**. Do not share the token or put it in a file.
-5. Click **Load from GitHub**, edit/add/delete/hide commands, then **Save & Publish**. The site updates after GitHub Pages deploys.
-6. Click **Clear token** and close the page when done. Revoke tokens you no longer need in GitHub settings.
+## Security
+GitHub Pages is static and the Admin panel is visible to anyone. Publishing requires a fine-grained GitHub token restricted to this repository with Contents read/write. Do not share your token or use the editor on untrusted computers. The token is held in the page input only and is not stored by the site. Browser extensions and other scripts with page access can still see it. For stronger security use a backend-based OAuth flow instead.
 
-## Notes and limitations
-- The starter command descriptions were drafted from prior discussions; verify them against your actual Streamer.bot actions before sharing. The `!flip` name was corrected from the earlier placeholder `!coinflip`.
-- This site is a **directory only**; it does not control Streamer.bot or automatically sync new commands.
-- Anyone can see the public directory and the editor UI. Only someone holding a GitHub token authorized for the repository can publish. GitHub Pages alone cannot provide a private password-protected admin login. For a proper GitHub OAuth sign-in with no pasted token, a separate authentication service/backend is needed.
-- Your token is transmitted only to `api.github.com` via HTTPS by the JavaScript in `app.js`; inspect and trust the deployed code before using it. Browser extensions or compromised site scripts could still read tokens.
-- Avoid editing `commands.json` simultaneously from GitHub and the site. The editor checks the remote file version before writing.
-- A GitHub Pages deployment may take a minute or more after a successful publish.
-
-## Sorting commands
-Use the **Sort commands** dropdown in the public toolbar. It works in **All** and every individual category. Choose category A–Z, command A–Z, command Z–A, or custom/saved order. Sorting only changes the display; it does not rewrite `commands.json`.
+## Compatibility
+The editor reads old array-format commands.json files but publishing upgrades them to the new object format. Upload the included new commands.json to start with customizable settings. Existing command descriptions are sample content; verify against Streamer.bot. Drag-and-drop is designed for desktop mouse/pointer; mobile reordering may vary.
