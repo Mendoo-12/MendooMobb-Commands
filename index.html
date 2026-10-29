@@ -5,47 +5,38 @@
 <title>MENDO — Command Center</title>
 <style>
 :root{color-scheme:dark;--bg:#0a101a;--panel:#111c2b;--card:#172638;--line:#293a4c;--text:#eef6ff;--muted:#a4b6ca;--accent:#83d7ff;--gold:#ffd17c}*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at 80% -20%,#183854 0%,transparent 55%),var(--bg);color:var(--text);font:15px/1.5 system-ui,-apple-system,Segoe UI,sans-serif}main{max-width:1100px;margin:auto;padding:32px 20px 70px}header{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:42px}.logo{font-size:17px;font-weight:900;letter-spacing:.2em}.logo span{color:var(--accent)}.tag{border:1px solid var(--line);border-radius:99px;padding:7px 12px;color:var(--muted);font-size:12px}h1{font-size:clamp(34px,6vw,68px);letter-spacing:-.055em;line-height:1.05;margin:0 0 14px}h1 em{font-style:normal;color:var(--accent)}.lead{color:var(--muted);max-width:620px;font-size:17px;margin:0 0 28px}.hero{padding:22px 0 32px}.stats{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:30px}.stat{background:#142335;border:1px solid var(--line);border-radius:14px;padding:13px 18px;min-width:130px}.stat b{display:block;font-size:23px}.stat span{color:var(--muted);font-size:12px}.toolbar{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:20px}input{width:100%;padding:15px 18px;border-radius:12px;border:1px solid var(--line);background:#101d2b;color:var(--text);outline:none;font:inherit}input:focus{border-color:var(--accent)}.tabs{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:22px}button{font:inherit;cursor:pointer}.tab{border:1px solid var(--line);background:#142234;color:var(--muted);border-radius:10px;padding:9px 14px}.tab.active{background:var(--accent);border-color:var(--accent);color:#071420;font-weight:800}.sectionhead{display:flex;justify-content:space-between;align-items:center;margin:0 0 14px}.sectionhead h2{margin:0;font-size:20px}.sectionhead small{color:var(--muted)}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.command{background:var(--card);border:1px solid var(--line);border-radius:15px;padding:19px;display:flex;gap:14px;align-items:flex-start;transition:border-color .2s,transform .2s}.command:hover{border-color:#5485a5;transform:translateY(-2px)}.symbol{display:grid;place-items:center;flex:none;width:38px;height:38px;border-radius:11px;background:#243a4d;color:var(--accent);font-size:19px}.info{min-width:0;flex:1}.cmd{font-size:17px;font-weight:800;color:var(--text);overflow-wrap:anywhere}.desc{color:var(--muted);font-size:13px;margin:5px 0 10px}.meta{display:flex;flex-wrap:wrap;gap:6px}.chip{font-size:11px;color:#c8d9e9;background:#223449;border-radius:7px;padding:4px 7px}.copy{flex:none;background:transparent;border:1px solid #36516b;border-radius:9px;color:var(--accent);padding:8px 10px}.copy:hover{background:#24435b}.empty{border:1px dashed var(--line);border-radius:15px;text-align:center;padding:45px;color:var(--muted)}footer{margin-top:42px;padding-top:24px;border-top:1px solid var(--line);color:var(--muted);font-size:13px}a{color:var(--accent)}.note{background:#162639;border-left:3px solid var(--gold);border-radius:8px;padding:12px 16px;color:#c7d7e7;margin:22px 0;font-size:13px}kbd{background:#26394b;padding:2px 6px;border-radius:5px}@media(max-width:720px){.grid{grid-template-columns:1fr}header{margin-bottom:20px}.command{padding:15px}.tag{font-size:10px}}
-</style>
-</head>
+
+.actions{display:flex;gap:10px;align-items:center;flex-wrap:wrap}.btn{border:1px solid #37536d;background:#1d3449;color:#e9f6ff;border-radius:10px;padding:10px 14px;font-weight:700}.btn.primary{background:var(--accent);color:#071420;border-color:var(--accent)}.btn.danger{border-color:#7c4051;color:#ffc6d2}.btn:disabled{opacity:.5;cursor:not-allowed}.admin{margin-top:26px;background:#101c2c;border:1px solid #34506a;border-radius:17px;padding:22px}.admin[hidden],.hidden{display:none!important}.formgrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:13px}.field{display:flex;flex-direction:column;gap:5px}.field.wide{grid-column:1/-1}.field label{font-size:12px;color:#bfd0df}.field input,.field textarea,.field select{width:100%;border-radius:9px;background:#0b1725;border:1px solid #35506a;color:#fff;padding:11px;font:inherit}.field textarea{min-height:70px}.check{display:flex;align-items:center;gap:9px}.check input{width:auto}.adminlist{display:grid;gap:7px;margin-top:15px;max-height:390px;overflow:auto}.adminitem{display:flex;justify-content:space-between;gap:12px;align-items:center;padding:10px 12px;background:#1a2a3c;border:1px solid #30475e;border-radius:10px}.adminitem small{color:var(--muted)}.notice{color:#a8c8e1;font-size:13px;margin:10px 0}.warning{color:#ffd17c}.error{color:#ffb5c5}.success{color:#a7f3cb}.line{border:0;border-top:1px solid #30455b;margin:22px 0}.admin h3{margin:8px 0 12px}.help{font-size:12px;color:var(--muted)}.adminitem .btn{padding:6px 10px}.status{min-height:22px}.pill{font-size:11px;color:#a9e8ff;border:1px solid #42637e;padding:4px 8px;border-radius:20px}
+@media(max-width:650px){.formgrid{grid-template-columns:1fr}.field.wide{grid-column:auto}.admin{padding:15px}}
+</style></head>
 <body><main>
-<header><div class="logo">✦ <span>MENDO</span> / COMMUNITY</div><div class="tag">STREAM COMMAND DIRECTORY</div></header>
+<header><div class="logo">✦ <span>MENDO</span> / COMMUNITY</div><div class="actions"><span class="tag">STREAM COMMAND DIRECTORY</span><button id="adminToggle" class="btn" type="button">Admin</button></div></header>
 <section class="hero"><h1>COMMAND <em>CENTER.</em></h1><p class="lead">Your stream. Your coins. Your games. Browse commands, learn the rules, and copy what you want to use in Twitch chat.</p><div class="stats"><div class="stat"><b id="count">0</b><span>Commands listed</span></div><div class="stat"><b id="categories">0</b><span>Categories</span></div><div class="stat"><b>∞</b><span>Ways to play</span></div></div></section>
-<div class="toolbar"><input id="search" type="search" placeholder="⌕  Search commands, games, or descriptions…" aria-label="Search commands"></div>
+<div class="toolbar"><input id="search" type="search" placeholder="⌕ Search commands, games, or descriptions…" aria-label="Search commands"></div>
 <nav id="tabs" class="tabs" aria-label="Command categories"></nav><div class="sectionhead"><h2 id="heading">All Commands</h2><small id="shown"></small></div><section id="grid" class="grid" aria-live="polite"></section>
-<div class="note">ℹ️ This is a starter directory based on your MENDO systems. Check exact command names, permissions, cooldowns, and rewards against your Streamer.bot actions before sharing publicly. Staff-only commands are intentionally omitted.</div>
+<div class="note">ℹ️ Commands and descriptions are editable by the site owner. Check command names, permissions, cooldowns and payouts against Streamer.bot before publishing. This directory is informational and does not execute commands.</div>
+<section id="adminPanel" class="admin" hidden>
+ <div class="actions" style="justify-content:space-between"><h2 style="margin:0">Command Editor</h2><span class="pill">GitHub publishing</span></div>
+ <p class="notice">Changes are a preview until you click <b>Save & Publish</b>. Publishing requires a repository-scoped GitHub token, entered only when editing. Do not use this editor on an untrusted/shared device.</p>
+ <div class="formgrid">
+ <div class="field"><label for="owner">GitHub username / organization</label><input id="owner" placeholder="your-username" autocomplete="off"></div>
+ <div class="field"><label for="repo">Repository</label><input id="repo" value="mendo-commands" autocomplete="off"></div>
+ <div class="field wide"><label for="token">Fine-grained GitHub token (Contents: Read and write, for this repository only)</label><input id="token" type="password" placeholder="github_pat_…" autocomplete="off" spellcheck="false"></div>
+ </div>
+ <div class="actions" style="margin-top:12px"><button class="btn" id="loadRemote">Load from GitHub</button><button class="btn primary" id="publish">Save & Publish</button><button class="btn" id="logout">Clear token</button></div>
+ <p id="syncStatus" class="notice status" role="status"></p>
+ <hr class="line"><h3 id="editHeading">Add a command</h3>
+ <form id="editForm" class="formgrid">
+ <div class="field"><label for="cmdName">Command name</label><input id="cmdName" required placeholder="!blackjack"></div>
+ <div class="field"><label for="cmdCategory">Category</label><input id="cmdCategory" list="categoryOptions" required placeholder="Casino"><datalist id="categoryOptions"></datalist></div>
+ <div class="field"><label for="cmdIcon">Icon / emoji</label><input id="cmdIcon" maxlength="8" value="🎮"></div>
+ <div class="field"><label for="cmdDetails">Cost / cooldown / requirements</label><input id="cmdDetails" placeholder="Minimum wager: …"></div>
+ <div class="field wide"><label for="cmdDescription">Description</label><textarea id="cmdDescription" required placeholder="What does this command do?"></textarea></div>
+ <div class="field wide"><label class="check"><input type="checkbox" id="cmdVisible" checked> Visible to viewers</label></div>
+ <div class="actions field wide"><button type="submit" class="btn primary" id="saveLocal">Add command</button><button type="button" class="btn" id="cancelEdit">Clear form</button></div>
+ </form>
+ <h3>Manage commands <small id="editCount"></small></h3><div class="adminlist" id="adminList"></div>
+ </section>
 <footer>Made for the MENDO community · Powered by Streamer.bot · <span id="year"></span></footer>
 </main>
-<script>
-// EDIT THIS LIST to add or change commands. Categories are generated automatically.
-const commands = [
-{category:'Daily & Streaks',icon:'🔥',name:'!daily',description:'Claim your stream attendance reward once per bot session while the channel is live.',details:'Reward increases with your streak · Bonus every 10 claims'},
-{category:'Daily & Streaks',icon:'🔥',name:'!streak',description:'Check your current attendance streak and best streak.'},
-{category:'Economy',icon:'💰',name:'!work',description:'Work to earn coins.',details:'2-minute cooldown'},
-{category:'Economy',icon:'💰',name:'!steal @user',description:'Try to steal coins from another viewer. You may get caught!',details:'50% success chance'},
-{category:'Economy',icon:'💰',name:'!give amount @user',description:'Give coins to another viewer.',details:'Check your Streamer.bot argument order'},
-{category:'Economy',icon:'💰',name:'!leaderboard',description:'See the five richest viewers.'},
-{category:'Economy',icon:'💰',name:'!points',description:'Check your coin balance or another viewer’s balance.',details:'Verify the public command alias'},
-{category:'Casino',icon:'🎰',name:'!gamble',description:'Wager coins for a chance to win.'},
-{category:'Casino',icon:'🎰',name:'!roulette',description:'Place a roulette wager.'},
-{category:'Casino',icon:'🎰',name:'!blackjack',description:'Play blackjack against the dealer.'},
-{category:'Casino',icon:'🎰',name:'!coinflip',description:'Bet on heads or tails.'},
-{category:'Casino',icon:'🎰',name:'!highlow',description:'Guess whether the next card is higher or lower.'},
-{category:'Lottery',icon:'🎟️',name:'!buytickets',description:'Buy tickets for the active lottery.',details:'2,000 coins per ticket · Verify command alias'},
-{category:'Lottery',icon:'🎟️',name:'!tickets',description:'See how many lottery tickets you own.',details:'Verify command alias'},
-{category:'Lottery',icon:'🎟️',name:'!lotterytotal',description:'Check the current lottery prize pool.',details:'Verify command alias'},
-{category:'Loans',icon:'🏦',name:'!loan',description:'Borrow coins from the bank.'},
-{category:'Loans',icon:'🏦',name:'!payloan',description:'Pay back an outstanding loan.'},
-{category:'Loans',icon:'🏦',name:'!debt',description:'Check outstanding debt.'},
-{category:'Loans',icon:'🏦',name:'!loans',description:'View outstanding loans, if available to viewers.'},
-{category:'Bounties',icon:'🎯',name:'!bounty @user amount',description:'Place or increase a bounty on another viewer.',details:'Minimum 75,000 coins'},
-{category:'Bounties',icon:'🎯',name:'!kill @user',description:'Attempt to claim a bounty.',details:'30-second cooldown'},
-{category:'Bounties',icon:'🎯',name:'!topkillers',description:'See the most successful bounty hunters.'},
-{category:'Duels',icon:'⚔️',name:'!duel @user amount',description:'Challenge another viewer to a coin wager.'},
-{category:'Duels',icon:'⚔️',name:'!accept',description:'Accept a pending duel challenge.'}
-];
-let selected='All';
-const tabs=document.querySelector('#tabs'),grid=document.querySelector('#grid'),search=document.querySelector('#search');
-const categories=['All',...new Set(commands.map(c=>c.category))];
-document.querySelector('#count').textContent=commands.length;document.querySelector('#categories').textContent=categories.length-1;document.querySelector('#year').textContent=new Date().getFullYear();
-function render(){tabs.innerHTML='';for(const cat of categories){const b=document.createElement('button');b.className='tab'+(cat===selected?' active':'');b.textContent=cat;b.setAttribute('aria-pressed',cat===selected);b.onclick=()=>{selected=cat;render()};tabs.appendChild(b)}const q=search.value.trim().toLowerCase();const items=commands.filter(c=>(selected==='All'||c.category===selected)&&[c.name,c.description,c.category,c.details||''].join(' ').toLowerCase().includes(q));document.querySelector('#heading').textContent=selected==='All'?'All Commands':selected;document.querySelector('#shown').textContent=items.length+' shown';grid.innerHTML='';if(!items.length){grid.innerHTML='<div class="empty">No commands found. Try another search.</div>';return}for(const c of items){const card=document.createElement('article');card.className='command';const symbol=document.createElement('div');symbol.className='symbol';symbol.textContent=c.icon;const info=document.createElement('div');info.className='info';const title=document.createElement('div');title.className='cmd';title.textContent=c.name;const desc=document.createElement('p');desc.className='desc';desc.textContent=c.description;info.append(title,desc);if(c.details){const meta=document.createElement('div');meta.className='meta';const chip=document.createElement('span');chip.className='chip';chip.textContent=c.details;meta.append(chip);info.append(meta)}const copy=document.createElement('button');copy.className='copy';copy.textContent='Copy';copy.setAttribute('aria-label','Copy '+c.name);copy.onclick=async()=>{const value=c.name.split(' ')[0];try{await navigator.clipboard.writeText(value);copy.textContent='Copied!';setTimeout(()=>copy.textContent='Copy',1300)}catch(e){copy.textContent='Select command';}};card.append(symbol,info,copy);grid.append(card)}}search.addEventListener('input',render);render();
-</script></body></html>
+<script src="app.js" defer></script></body></html>
