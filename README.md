@@ -23,3 +23,6 @@ A static public command directory with an owner-side editor. The editor writes `
 - Your token is transmitted only to `api.github.com` via HTTPS by the JavaScript in `app.js`; inspect and trust the deployed code before using it. Browser extensions or compromised site scripts could still read tokens.
 - Avoid editing `commands.json` simultaneously from GitHub and the site. The editor checks the remote file version before writing.
 - A GitHub Pages deployment may take a minute or more after a successful publish.
+
+## Sorting commands
+Use the **Sort commands** dropdown in the public toolbar. It works in **All** and every individual category. Choose category A–Z, command A–Z, command Z–A, or custom/saved order. Sorting only changes the display; it does not rewrite `commands.json`.
