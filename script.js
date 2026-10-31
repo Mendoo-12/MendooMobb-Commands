@@ -25,14 +25,14 @@ const commands = [
   { name: '!roulette', category: 'Casino', description: 'Place a wager on red, black or green for a chance to win.', usage: '!roulette 100 (red/black/green)' },
   { name: '!flip', category: 'Casino', description: 'Flip a coin for a 50/50 chance to win.', usage: '!flip 100' },
   { name: '!dice', category: 'Casino', description: 'Roll the dice for a chance to win.', usage: '!dice 100' },
-  { name: '!work', category: 'Economy', description: 'Work to earn MendoCoins from the kingdom economy. The work system has a two-minute cooldown.'},
-  { name: '!daily', category: 'Economy', description: 'Claim your daily reward from the Treasury. Every consecutive stream you claim your daily reward, the more MendoCoins you will receive.'},
+  { name: '!work', category: 'Economy', description: 'Work to earn MendoCoins from the kingdom economy. The work system has a two-minute cooldown.' },
+  { name: '!daily', category: 'Economy', description: 'Claim your daily reward from the Treasury. Every consecutive stream you claim your daily reward, the more MendoCoins you will receive.' },
   { name: '!loan', category: 'Economy', description: 'Request a loan from the Royal Bank. Interest will be applied to your balance.', usage: '!loan 1000' },
-  { name: '!loans', category: 'Economy', description: 'Check all current loans from all chatters.'},
-  { name: '!debt', category: 'Economy', description: 'Check your current debt from the Royal Bank.'},
+  { name: '!loans', category: 'Economy', description: 'Check all current loans from all chatters.' },
+  { name: '!debt', category: 'Economy', description: 'Check your current debt from the Royal Bank.' },
   { name: '!payloan', category: 'Economy', description: 'Pay off all or a portion of your loan.', usage: '!payloan 500 or !payloan all' },
-  { name: '!credit', category: 'Economy', description: 'Check what your current credit status is.'},
-  { name: '!stocks', category: 'Economy', description: 'Check the current stock market and see what stocks are available to buy or sell.'},
+  { name: '!credit', category: 'Economy', description: 'Check what your current credit status is.' },
+  { name: '!stocks', category: 'Economy', description: 'Check the current stock market and see what stocks are available to buy or sell.' },
   { name: '!buystock', category: 'Economy', description: 'Buy a stock from the stock market.', usage: '!buystock (stock name) (# of shares)' },
   { name: '!sellstock', category: 'Economy', description: 'Sell a stock from your portfolio.', usage: '!sellstock (stock name) (# of shares)' },
   { name: '!portfolio', category: 'Economy', description: 'View your stock portfolio.' },
@@ -83,22 +83,63 @@ function render() {
     list.append(p);
   }
 
+
   matched.forEach(c => {
-    const card = document.createElement('article'); card.className = 'command-card'; const tag = document.createElement('span'); tag.className = 'command-tag'; tag.textContent = c.category; const title = document.createElement('h3'); title.textContent = c.name;
+    const card = document.createElement('article');
+    card.className = 'command-card';
+
+    const tag = document.createElement('span');
+    tag.className = 'command-tag';
+    tag.textContent = c.category;
+
+    const title = document.createElement('h3');
+    title.textContent = c.name;
 
     const desc = document.createElement('p');
     desc.textContent = c.description;
 
     card.append(tag, title, desc);
 
-    if (typeof c.usage === 'string' && c.usage.trim() !== '') {
-      const code = document.createElement('code');
-      code.textContent = c.usage;
-      card.append(code);
-    }
+    // Copy the usage example when available,
+    // otherwise copy the command name.
+    const commandText =
+      typeof c.usage === 'string' && c.usage.trim() !== ''
+        ? c.usage
+        : c.name;
 
+    const copyRow = document.createElement('div');
+    copyRow.className = 'command-copy-row';
+
+    const code = document.createElement('code');
+    code.textContent = commandText;
+
+    const copyButton = document.createElement('button');
+    copyButton.type = 'button';
+    copyButton.className = 'command-copy-btn';
+    copyButton.textContent = 'Copy';
+    copyButton.setAttribute('aria-label', `Copy ${c.name}`);
+
+    copyButton.addEventListener('click', async () => {
+      try {
+        await navigator.clipboard.writeText(commandText);
+
+        copyButton.textContent = 'Copied!';
+        setTimeout(() => {
+          copyButton.textContent = 'Copy';
+        }, 1800);
+      } catch (error) {
+        copyButton.textContent = 'Failed';
+        setTimeout(() => {
+          copyButton.textContent = 'Copy';
+        }, 1800);
+      }
+    });
+
+    copyRow.append(code, copyButton);
+    card.append(copyRow);
     list.append(card);
   });
+
 }
 
 search.addEventListener('input', render); render();
