@@ -1,5 +1,7 @@
 // Add verified Twitch commands here as your kingdom expands.
 const commands = [
+  {name:'!clip',category:'Chat Commands',description:'Create a Twitch clip of the last 30s of the current stream.'},
+  {name:'!bite',category:'Chat Commands',description:'Bite a fellow chatter. A fun way to interact with the community.'},
   {name:'!gamble',category:'Casino',description:'Place a wager and hope for a lucky outcome.',usage:'!gamble 100'},
   {name:'!highlow',category:'Casino',description:'Place a wager and choose whether the outcome will be high or low.',usage:'!highlow 100 high'},
   {name:'!work',category:'Economy',description:'Work to earn MendoCoins from the kingdom economy. The work system has a two-minute cooldown.',usage:'!work'},
