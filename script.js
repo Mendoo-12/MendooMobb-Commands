@@ -1,5 +1,6 @@
 // Add verified Twitch commands here as your kingdom expands.
 const commands = [
+  {name:'!gamble',category:'Casino',description:'Place a wager and hope for a lucky outcome.',usage:'!gamble 100'},
   {name:'!highlow',category:'Casino',description:'Place a wager and choose whether the outcome will be high or low.',usage:'!highlow 100 high'},
   {name:'!work',category:'Economy',description:'Work to earn MendoCoins from the kingdom economy. The work system has a two-minute cooldown.',usage:'!work'},
   {name:'!daily',category:'Economy',description:'Claim your stream-session daily reward when the system is active.',usage:'!daily'}
