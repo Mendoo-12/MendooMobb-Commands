@@ -36,8 +36,21 @@ const commands = [
   { name: '!buystock', category: 'Economy', description: 'Buy a stock from the stock market.', usage: '!buystock (stock name) (# of shares)' },
   { name: '!sellstock', category: 'Economy', description: 'Sell a stock from your portfolio.', usage: '!sellstock (stock name) (# of shares)' },
   { name: '!portfolio', category: 'Economy', description: 'View your stock portfolio.' },
+  { name: '!treasury', category: 'Economy', description: 'View the Royal Treasury\'s balance.' },
   { name: '!marketnews', category: 'Economy', description: 'View the latest news about the stock market.' },
-
+  { name: '!rroulette', category: 'Chat Games', description: 'Play a round of Russian roulette alone, with others or 1v1.' },
+  { name: '!bounty', category: 'Chat Games', description: 'Place a bounty on another chatter. Costs a minimum of 75k MendoCoins.', usage: '!bounty @user 75000' },
+  { name: '!Kill', category: 'Chat Games', description: 'Allows you to kill a chatter with a bounty and collect reward, so long as you have a weapon.', usage: '!kill @user' },
+  { name: '!bounties', category: 'Chat Games', description: 'View all active bounties in the kingdom.' },
+  { name: '!killlist', category: 'Chat Games', description: 'View top killers in the kingdom.' },
+  { name: '!clash', category: 'Chat Games', description: 'Challenge another player for MendoCoins, if challenged, accept or deny request with !accept/!deny.', usage: '!clash @user 1000' },
+  { name: '!heist', category: 'Chat Games', description: 'Starts a heist against the kingdoms treasury. If another player started one, type !joinheist to be part of it. 3 minimum players required and chance of success increases with more participants. 5K entrance fee for all players.' },
+  { name: '!shop', category: 'Markets', description: 'View the Royal Shop and see what items are available for purchase. For more pages use:', usage: '!shop 1/2' },
+  { name: '!shopbuy', category: 'Markets', description: 'Buy an item from the Royal Shop.', usage: '!shopbuy [itemId] [quantity]' },
+  { name: '!blackmarket', category: 'Markets', description: 'View the black market and see what items are available for purchase.' },
+  { name: '!buy', category: 'Markets', description: 'Buy an item from the black market.', usage: '!buy [itemId]' },
+  { name: '!inventory', category: 'Markets', description: 'View your inventory and see what items you own.' },
+  { name: '!equip', category: 'Markets', description: 'Equip an item from your inventory, usually a weapon for bounties.', usage: '!equip [itemId]' },
 ];
 const pages = [...document.querySelectorAll('.page')]; const links = [...document.querySelectorAll('.nav-link')]; const sidebar = document.getElementById('sidebar'); const breadcrumb = document.getElementById('breadcrumb');
 function navigate() { let id = location.hash.slice(1) || 'home'; if (!document.getElementById(id) || !pages.some(p => p.id === id)) id = 'home'; pages.forEach(p => p.classList.toggle('active', p.id === id)); links.forEach(l => l.classList.toggle('active', l.dataset.page === id)); breadcrumb.textContent = ({ home: 'ROYAL HALL', commands: 'TWITCH COMMANDS', economy: 'ROYAL ECONOMY', casino: 'THE CASINO', bank: 'ROYAL BANK', stocks: 'STOCK EXCHANGE', shop: 'ROYAL SHOP', lore: 'KINGDOM LORE' })[id]; sidebar.classList.remove('open'); window.scrollTo(0, 0) }
