@@ -46,7 +46,6 @@ function render() {
 
     card.append(tag, title, desc);
 
-    // Only display usage box when usage exists
     if (typeof c.usage === 'string' && c.usage.trim() !== '') {
       const code = document.createElement('code');
       code.textContent = c.usage;
