@@ -1,51 +1,446 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#101015">
-<title>Kingdom of Wisteria | Royal Archives</title>
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101015">
+  <title>Kingdom of Wisteria | Royal Archives</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-<div class="layout">
-<aside class="sidebar" id="sidebar">
-  <a class="brand" href="#home"><div><strong>MENDOOMOBB</strong><small>COMMAND HUB</small></div></a>
-  <div class="side-label">NAVIGATION</div>
-  <nav aria-label="Main navigation">
-    <a href="#home" class="nav-link active" data-page="home"><span>⌂</span> Home</a>
-    <a href="#commands" class="nav-link" data-page="commands"><span>⌘</span> All Commands</a>
-    <!--<a href="#casino" class="nav-link" data-page="casino"><span>⚄</span> The Casino</a> -->
-    <a href="#kingdom" class="nav-link" data-page="kingdom"><span>◈</span>Economy</a>
-    <!-- <a href="#games" class="nav-link" data-page="games"><span>▣</span> Chat Games</a> -->
-    <a href="#archives" class="nav-link" data-page="archives"><span>♛</span> Kingdom</a>
-    <!-- <a href="#guides" class="nav-link" data-page="guides"><span>◇</span> Guides</a> -->
-  </nav>
-  <div class="sidebar-bottom"><span class="status-dot"></span> THE KINGDOM ENDURES <small>Official community guide · v1.0</small></div>
-</aside>
-<div class="main-wrap">
-<header class="topbar"><button class="menu-btn" id="menuBtn" aria-label="Toggle menu">☰</button><div class="breadcrumb">THE KINGDOM <span>/</span> <strong id="breadcrumb">ROYAL HALL</strong></div><a class="top-link" href="https://www.twitch.tv/ayemendoo" target="_blank" rel="noopener">TWITCH ↗</a></header>
-<main id="main">
-<section class="page active" id="home">
-  <div class="hero"><div class="hero-art"></div><div class="hero-content"><div class="eyebrow">✦ &nbsp; THE OFFICIAL SITE FOR ALL MENDOOMOBB COMMANDS &nbsp; ✦</div><h1>THE KINGDOM<br><em>OF WISTERIA</em></h1><p>A realm forged in coin, chance, and the will of its people. Discover the commands, laws, and legends that govern the kingdom.</p><div class="hero-actions"><a href="#commands" class="btn primary">EXPLORE COMMANDS <span>→</span></a><a href="#archives" class="btn outline">READ THE LORE</a></div></div></div>
-  <div class="section-heading"><div><div class="eyebrow">YOUR JOURNEY BEGINS HERE</div><h2>Explore the Realm</h2></div><span class="ornament">✦ ───── ✦</span></div>
-  <div class="feature-grid">
-    <a href="#commands" class="feature"><span class="feature-icon">⌘</span><div class="feature-kicker">THE HANDBOOK</div><h3>Command Directory</h3><p>Every Twitch command, explained and organized for easy access.</p><span class="feature-action">EXPLORE →</span></a>
-    <!--<a href="#casino" class="feature"><span class="feature-icon">⚄</span><div class="feature-kicker">FORTUNE FAVORS THE BOLD</div><h3>Royal Casino</h3><p>Games of chance, wagers, and the rules of the house.</p><span class="feature-action">ENTER CASINO →</span></a>-->
-    <a href="#kingdom" class="feature"><span class="feature-icon">◈</span><div class="feature-kicker">THE ROYAL TREASURY</div><h3>Kingdom Economy</h3><p>Learn how MendoCoins circulate through the kingdom's vaults.</p><span class="feature-action">LEARN MORE →</span></a>
-    <a href="#archives" class="feature"><span class="feature-icon">♛</span><div class="feature-kicker">THE CHRONICLES</div><h3>Kingdom Lore</h3><p>Discover the founding decree and the story of the realm.</p><span class="feature-action">READ HISTORY →</span></a>
+  <div class="layout">
+    <aside class="sidebar" id="sidebar">
+      <a class="brand" href="#home">
+        <div><strong>MENDOOMOBB</strong><small>COMMAND HUB</small></div>
+      </a>
+      <div class="side-label">NAVIGATION</div>
+      <nav aria-label="Main navigation">
+        <a href="#home" class="nav-link active" data-page="home"><span>⌂</span> Home</a>
+        <a href="#commands" class="nav-link" data-page="commands"><span>⌘</span> All Commands</a>
+        <!--<a href="#casino" class="nav-link" data-page="casino"><span>⚄</span> The Casino</a> -->
+        <a href="#kingdom" class="nav-link" data-page="kingdom"><span>◈</span>Economy</a>
+        <!-- <a href="#games" class="nav-link" data-page="games"><span>▣</span> Chat Games</a> -->
+        <a href="#archives" class="nav-link" data-page="archives"><span>♛</span> Kingdom</a>
+        <!-- <a href="#guides" class="nav-link" data-page="guides"><span>◇</span> Guides</a> -->
+      </nav>
+      <div class="sidebar-bottom"><span class="status-dot"></span> THE KINGDOM ENDURES
+        <!--<small>Official community guide · v1.0</small>-->
+      </div>
+    </aside>
+    <div class="main-wrap">
+      <header class="topbar"><button class="menu-btn" id="menuBtn" aria-label="Toggle menu">☰</button>
+        <div class="breadcrumb">THE KINGDOM <span>/</span> <strong id="breadcrumb">ROYAL HALL</strong></div><a
+          class="top-link" href="https://www.twitch.tv/ayemendoo" target="_blank" rel="noopener">TWITCH ↗</a>
+      </header>
+      <main id="main">
+        <section class="page active" id="home">
+          <div class="hero">
+            <div class="hero-art"></div>
+            <div class="hero-content">
+              <div class="eyebrow">✦ &nbsp; THE OFFICIAL SITE FOR ALL MENDOOMOBB COMMANDS &nbsp; ✦</div>
+              <h1>THE KINGDOM<br><em>OF WISTERIA</em></h1>
+              <p>A realm forged in coin, chance, and the will of its people. Discover the commands, laws, and legends
+                that govern the kingdom.</p>
+              <div class="hero-actions"><a href="#commands" class="btn primary">EXPLORE COMMANDS <span>→</span></a><a
+                  href="#archives" class="btn outline">READ THE LORE</a></div>
+            </div>
+          </div>
+          <div class="section-heading">
+            <div>
+              <div class="eyebrow">YOUR JOURNEY BEGINS HERE</div>
+              <h2>Explore the Realm</h2>
+            </div><span class="ornament">✦ ───── ✦</span>
+          </div>
+          <div class="feature-grid">
+            <a href="#commands" class="feature"><span class="feature-icon">⌘</span>
+              <div class="feature-kicker">THE HANDBOOK</div>
+              <h3>Command Directory</h3>
+              <p>Every Twitch command, explained and organized for easy access.</p><span class="feature-action">EXPLORE
+                →</span>
+            </a>
+            <!--<a href="#casino" class="feature"><span class="feature-icon">⚄</span><div class="feature-kicker">FORTUNE FAVORS THE BOLD</div><h3>Royal Casino</h3><p>Games of chance, wagers, and the rules of the house.</p><span class="feature-action">ENTER CASINO →</span></a>-->
+            <a href="#kingdom" class="feature"><span class="feature-icon">◈</span>
+              <div class="feature-kicker">THE ROYAL TREASURY</div>
+              <h3>Kingdom Economy</h3>
+              <p>Learn how MendoCoins circulate through the kingdom's vaults.</p><span class="feature-action">LEARN MORE
+                →</span>
+            </a>
+            <a href="#archives" class="feature"><span class="feature-icon">♛</span>
+              <div class="feature-kicker">THE CHRONICLES</div>
+              <h3>Kingdom Lore</h3>
+              <p>Discover the founding decree and the story of the realm.</p><span class="feature-action">READ HISTORY
+                →</span>
+            </a>
+          </div>
+          <div class="notice"><span>♛</span>
+            <div><strong>A message from the crown</strong>
+              <p>The Royal Archives are being assembled. Additional commands, systems, and kingdom laws will be added as
+                they are confirmed.</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- THIS IS FOR THE COMMANDS PAGE -->
+        <section class="page" id="commands">
+          <div class="page-intro">
+            <div class="eyebrow">THE KINGDOM HANDBOOK</div>
+            <h1>Twitch Commands</h1>
+            <p>Browse the available commands and learn how to use them in chat.</p>
+          </div>
+          <div class="search-wrap"><span>⌕</span><input id="commandSearch" placeholder="Search commands..."
+              aria-label="Search commands"></div>
+          <div class="filters" id="filters"></div>
+          <div id="commandList" class="command-list"></div>
+        </section>
+
+        <!-- THIS IS FOR THE ECONOMY PAGE -->
+
+        <section class="page" id="kingdom">
+
+          <div class="page-intro">
+            <div class="eyebrow">THE FLOW OF GOLD</div>
+            <h1>The Royal Economy</h1>
+            <p>
+              Understand how MendoCoins move throughout Wisteria,
+              where the money is stored, and how every citizen
+              participates in the kingdom's economy.
+            </p>
+          </div>
+
+          <!-- 1. THE BASIC IDEA -->
+          <div class="panel">
+            <div class="eyebrow">THE FOUNDATION</div>
+            <h2>One Kingdom. A Finite Supply.</h2>
+
+            <p>
+              MendoCoins are the official currency of Wisteria.
+              Unlike a system that generates new coins whenever
+              someone earns a reward, the Royal Economy is designed
+              around a fixed supply.
+            </p>
+
+            <p>
+              This means money doesn't simply appear when someone
+              works, gambles, or receives a payment. Instead,
+              MendoCoins move between citizen wallets and the
+              kingdom's financial institutions.
+            </p>
+
+            <div class="example">
+              <span>THE GOLDEN RULE</span>
+              <code>Money leaving one account enters another.</code>
+            </div>
+
+            <p>
+              A citizen can become richer, a casino can lose money,
+              and the Treasury can grow or shrink. But these
+              transactions do not change the total amount of
+              MendoCoins in existence.
+            </p>
+          </div>
+
+          <!-- 2. WHERE THE MONEY LIVES -->
+          <div class="panel">
+            <div class="eyebrow">THE KINGDOM'S FUNDS</div>
+            <h2>Where Are MendoCoins Stored?</h2>
+
+            <p>
+              All MendoCoins belong somewhere in the economy.
+              Some are held by citizens, while others are stored
+              in royal vaults that fund different activities.
+            </p>
+
+            <h3>Citizen Wallets</h3>
+            <p>
+              Every citizen has a personal MendoCoin balance.
+              This is the money they can earn, spend, wager,
+              invest, or use to repay debts.
+            </p>
+
+            <h3>The Four Royal Institutions</h3>
+
+            <div class="vault-grid">
+
+              <div>
+                <b>♛</b>
+                <h3>Royal Treasury</h3>
+                <p>
+                  Funds work payments, kingdom rewards,
+                  and other treasury-supported activities.
+                  It also receives designated fees
+                  and kingdom revenue.
+                </p>
+              </div>
+
+              <div>
+                <b>⚄</b>
+                <h3>Casino Vault</h3>
+                <p>
+                  Holds the money backing casino games.
+                  Losing wagers add funds, while winning
+                  payouts draw from the vault.
+                </p>
+              </div>
+
+              <div>
+                <b>▣</b>
+                <h3>Royal Bank</h3>
+                <p>
+                  Provides money for citizen loans.
+                  Loan payments leave the bank,
+                  while repayments return funds
+                  to the banking system.
+                </p>
+              </div>
+
+              <div>
+                <b>⌁</b>
+                <h3>Stock Exchange Reserve</h3>
+                <p>
+                  Supports the stock market.
+                  Share purchases add funds to the
+                  reserve, while share sales
+                  are paid from its balance.
+                </p>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- 3. EARNING MONEY -->
+          <div class="panel">
+            <div class="eyebrow">MONEY ENTERING CIRCULATION</div>
+            <h2>How Do Citizens Receive MendoCoins?</h2>
+
+            <p>
+              Citizens can increase their personal balances
+              through different kingdom activities.
+              The important detail is that each payment
+              has a source.
+            </p>
+
+            <h3>Working for the Kingdom</h3>
+            <p>
+              When a citizen completes a job, their earnings
+              are paid from the Royal Treasury.
+            </p>
+
+            <div class="example">
+              <span>EXAMPLE: EARNING 3,000 MC</span>
+              <code>Royal Treasury: -3,000 MC</code>
+              <code>Citizen Wallet: +3,000 MC</code>
+            </div>
+
+            <h3>Claiming Rewards</h3>
+            <p>
+              Daily claims and other treasury-funded rewards
+              follow the same principle: existing money moves
+              from the funding reserve to the citizen.
+            </p>
+
+            <h3>Winning at the Casino</h3>
+            <p>
+              When a citizen wins a casino game, the payout
+              comes from the Casino Vault rather than
+              being created from nothing.
+            </p>
+
+            <h3>Receiving a Loan</h3>
+            <p>
+              The Royal Bank can transfer money to a citizen
+              through a loan. The citizen receives funds,
+              but also takes on a debt that must be repaid.
+            </p>
+
+            <h3>Selling Investments</h3>
+            <p>
+              Citizens can receive money by selling their
+              stock holdings. The Stock Exchange Reserve
+              funds the sale according to the current
+              market price and applicable fees.
+            </p>
+          </div>
+
+          <!-- 4. MONEY RETURNING -->
+          <div class="panel">
+            <div class="eyebrow">MONEY RETURNING TO THE KINGDOM</div>
+            <h2>Where Does Spent Money Go?</h2>
+
+            <p>
+              Earning is only half of the economy.
+              For the kingdom to continue operating,
+              MendoCoins must also flow back into
+              its institutions.
+            </p>
+
+            <h3>Casino Losses</h3>
+            <p>
+              When a citizen loses a wager, the
+              money goes to the Casino Vault.
+            </p>
+
+            <div class="example">
+              <span>EXAMPLE: LOSING A 5,000 MC WAGER</span>
+              <code>Citizen Wallet: -5,000 MC</code>
+              <code>Casino Vault: +5,000 MC</code>
+            </div>
+
+            <h3>Stock Purchases</h3>
+            <p>
+              Purchasing shares transfers their purchase
+              value into the Stock Exchange Reserve.
+              Trading fees are collected by the Treasury.
+            </p>
+
+            <div class="example">
+              <span>EXAMPLE: BUYING 10,000 MC OF SHARES</span>
+              <code>Citizen Wallet: -10,100 MC</code>
+              <code>Stock Reserve: +10,000 MC</code>
+              <code>Royal Treasury: +100 MC</code>
+            </div>
+
+            <h3>Loan Repayments</h3>
+            <p>
+              When citizens repay their loans,
+              the principal returns to the Royal Bank.
+              Any applicable interest or fees follow
+              the kingdom's lending rules.
+            </p>
+
+            <h3>The Royal Shop</h3>
+            <p>
+              The planned Royal Shop will give citizens
+              another way to spend their wealth.
+              Shop payments will return MendoCoins
+              to designated kingdom reserves.
+            </p>
+          </div>
+
+          <!-- 5. FINANCIAL LIMITS -->
+          <div class="panel">
+            <div class="eyebrow">THE LIMITS OF WEALTH</div>
+            <h2>What Happens When a Vault Runs Low?</h2>
+
+            <p>
+              The royal institutions do not possess
+              unlimited money. Each operates using
+              the funds available in its reserve.
+            </p>
+
+            <p>
+              For example, if the Casino Vault cannot
+              cover a winning payout, the casino must
+              refuse or restrict the transaction
+              rather than create additional MendoCoins.
+            </p>
+
+            <p>
+              Likewise, the Royal Treasury cannot
+              continue funding rewards indefinitely
+              without money returning through
+              the kingdom's economic activities.
+            </p>
+
+            <p>
+              This creates an important balance:
+              earning and spending both matter.
+            </p>
+          </div>
+
+          <!-- 6. COMPLETE ECONOMY -->
+          <div class="panel">
+            <div class="eyebrow">THE BIGGER PICTURE</div>
+            <h2>How Does Everything Stay Balanced?</h2>
+
+            <p>
+              Think of the Kingdom as one large economy
+              divided into several accounts.
+            </p>
+
+            <div class="example">
+              <span>THE KINGDOM'S TOTAL MONEY SUPPLY</span>
+              <code>All Citizen Wallets</code>
+              <code>+ Royal Treasury</code>
+              <code>+ Casino Vault</code>
+              <code>+ Royal Bank</code>
+              <code>+ Stock Exchange Reserve</code>
+              <code>= Total MendoCoins</code>
+            </div>
+
+            <p>
+              When one account gains money, another
+              account loses the same amount.
+              The distribution changes, but the
+              total supply remains constant.
+            </p>
+
+            <p>
+              Stock shares and outstanding loan debts
+              are tracked separately. They represent
+              investments and obligations, not
+              additional MendoCoins in circulation.
+            </p>
+
+            <p>
+              This is what makes Wisteria different:
+              citizens aren't simply collecting points.
+              They're participating in a shared economy
+              where their decisions affect the movement
+              of the kingdom's wealth.
+            </p>
+          </div>
+
+          <div class="notice">
+            <span>♛</span>
+            <div>
+              <strong>Every Coin Has a Place</strong>
+              <p>
+                The kingdom's wealth is constantly moving,
+                but its purpose remains the same:
+                to build a lasting economy for its citizens.
+              </p>
+            </div>
+          </div>
+
+        </section>
+
+        <!--<section class="page" id="casino"><div class="page-intro"><div class="eyebrow">FORTUNE AND FATE</div><h1>The Royal Casino</h1><p>Wager your MendoCoins in the kingdom's games of chance.</p></div><div class="panel"><h2>High or Low</h2><p>Choose high or low and place your wager. The outcome determines whether you win or lose according to the game's rules.</p><div class="example"><span>CHAT EXAMPLE</span><code>!highlow 100 high</code></div><p class="muted">Game odds, cooldowns, and exact payouts should be verified against the current Streamer.bot script before publishing.</p></div><div class="panel"><h2>The Casino Vault</h2><p>The casino has its own reserve within the kingdom's economy. This helps account for gambling wins and losses rather than creating unlimited new currency.</p></div></section>-->
+        <!--<section class="page" id="games"><div class="page-intro"><div class="eyebrow">THE CROWN'S LEDGER</div><h1>Royal Bank</h1><p>The kingdom's lending and debt system.</p></div><div class="panel"><h2>Loans & Repayment</h2><p>The Royal Bank is the planned source of lending funds. Loan terms, commands, repayment conditions, and collection rules will be published after confirmation.</p></div></section>-->
+        <!--<section class="page" id="lore"><div class="page-intro"><div class="eyebrow">THE MERCHANT'S EXCHANGE</div><h1>Stock Exchange</h1><p>A market for citizens of Wisteria.</p></div><div class="panel"><h2>Exchange Information</h2><p>The Stock Exchange is a planned kingdom system supported by its own reserve. Trading rules and available commands will appear here once finalized.</p></div></section>-->
+        <!--<section class="page" id="games"><div class="page-intro"><div class="eyebrow">THE ROYAL MARKETPLACE</div><h1>Royal Shop</h1><p>Spend your MendoCoins on items and services.</p></div><div class="panel"><h2>Coming to the Marketplace</h2><p>The shop will act as a currency sink: when citizens buy items, their MendoCoins return to the appropriate kingdom reserve. The catalog and commands will be added when confirmed.</p></div></section>-->
+        <section class="page" id="archives">
+          <div class="page-intro">
+            <div class="eyebrow">THE CHRONICLES OF WISTERIA</div>
+            <h1>Kingdom Lore</h1>
+            <p>The history behind the crown, the coin, and the founding of the realm.</p>
+          </div>
+          <div class="panel lore">
+            <div class="eyebrow">CHAPTER I</div>
+            <h2>The Founding of the Kingdom</h2>
+            <p>Before the kingdom's founding, MendoCoins flowed through the realm without a central treasury to account
+              for every coin. A citizen's observation about money in circulation sparked an investigation of the
+              kingdom's wealth.</p>
+            <p>The royal audit uncovered more than four trillion MendoCoins spread across 1,365 accounts. In response,
+              Mad King Mendo proposed a one-time progressive founding tax to fund the Royal Treasury, Casino Vault,
+              Royal Bank, and Stock Exchange Reserve.</p>
+            <p>Thus began the vision of Wisteria: a realm where wealth moves between citizens and institutions, instead
+              of appearing from thin air.</p>
+            <div class="lore-signature">♛ &nbsp; By Order of the Crown</div>
+          </div>
+        </section>
+      </main>
+      <footer>♛ &nbsp; MENDOOMOBB <span>AN OFFICIAL SITE FOR ALL AYEMENDOO TWITCH COMMANDS AND CHAT GAMES</span>
+      </footer>
+    </div>
   </div>
-  <div class="notice"><span>♛</span><div><strong>A message from the crown</strong><p>The Royal Archives are being assembled. Additional commands, systems, and kingdom laws will be added as they are confirmed.</p></div></div>
-</section>
-<section class="page" id="commands"><div class="page-intro"><div class="eyebrow">THE KINGDOM HANDBOOK</div><h1>Twitch Commands</h1><p>Browse the available commands and learn how to use them in chat.</p></div><div class="search-wrap"><span>⌕</span><input id="commandSearch" placeholder="Search commands..." aria-label="Search commands"></div><div class="filters" id="filters"></div><div id="commandList" class="command-list"></div></section>
-<section class="page" id="kingdom"><div class="page-intro"><div class="eyebrow">THE FLOW OF GOLD</div><h1>The Royal Economy</h1><p>MendoCoins are the currency of the Kingdom of Wisteria.</p></div><div class="panel"><h2>One Kingdom. A Finite Supply.</h2><p>The kingdom is designed around a fixed money supply. Rather than creating coins from nowhere every time a citizen earns a reward, the economy uses dedicated reserves and vaults. Coins move between those reserves and citizen wallets.</p><div class="vault-grid"><div><b>♛</b><h3>Royal Treasury</h3><p>Funds kingdom operations and rewards.</p></div><div><b>⚄</b><h3>Casino Vault</h3><p>Backs the casino's wins and losses.</p></div><div><b>▣</b><h3>Royal Bank</h3><p>Supports the kingdom's lending system.</p></div><div><b>⌁</b><h3>Stock Reserve</h3><p>Capital reserved for the stock exchange.</p></div></div></div><div class="panel"><h2>The Founding Tax</h2><p>At the founding of the new economy, a one-time progressive tax was chosen to seed the kingdom's vaults, with wealthier wallets contributing a greater share. The planned allocation of the collected tax was:</p><div class="allocation"><div><span>Treasury</span><strong>25%</strong><i style="--pct:25%"></i></div><div><span>Casino Vault</span><strong>40%</strong><i style="--pct:40%"></i></div><div><span>Royal Bank</span><strong>15%</strong><i style="--pct:15%"></i></div><div><span>Stock Reserve</span><strong>20%</strong><i style="--pct:20%"></i></div></div><p class="muted">These are the planned founding allocations, not live vault balances.</p></div></section>
-<!--<section class="page" id="casino"><div class="page-intro"><div class="eyebrow">FORTUNE AND FATE</div><h1>The Royal Casino</h1><p>Wager your MendoCoins in the kingdom's games of chance.</p></div><div class="panel"><h2>High or Low</h2><p>Choose high or low and place your wager. The outcome determines whether you win or lose according to the game's rules.</p><div class="example"><span>CHAT EXAMPLE</span><code>!highlow 100 high</code></div><p class="muted">Game odds, cooldowns, and exact payouts should be verified against the current Streamer.bot script before publishing.</p></div><div class="panel"><h2>The Casino Vault</h2><p>The casino has its own reserve within the kingdom's economy. This helps account for gambling wins and losses rather than creating unlimited new currency.</p></div></section>-->
-<!--<section class="page" id="games"><div class="page-intro"><div class="eyebrow">THE CROWN'S LEDGER</div><h1>Royal Bank</h1><p>The kingdom's lending and debt system.</p></div><div class="panel"><h2>Loans & Repayment</h2><p>The Royal Bank is the planned source of lending funds. Loan terms, commands, repayment conditions, and collection rules will be published after confirmation.</p></div></section>-->
-<!--<section class="page" id="lore"><div class="page-intro"><div class="eyebrow">THE MERCHANT'S EXCHANGE</div><h1>Stock Exchange</h1><p>A market for citizens of Wisteria.</p></div><div class="panel"><h2>Exchange Information</h2><p>The Stock Exchange is a planned kingdom system supported by its own reserve. Trading rules and available commands will appear here once finalized.</p></div></section>-->
-<!--<section class="page" id="games"><div class="page-intro"><div class="eyebrow">THE ROYAL MARKETPLACE</div><h1>Royal Shop</h1><p>Spend your MendoCoins on items and services.</p></div><div class="panel"><h2>Coming to the Marketplace</h2><p>The shop will act as a currency sink: when citizens buy items, their MendoCoins return to the appropriate kingdom reserve. The catalog and commands will be added when confirmed.</p></div></section>-->
-<section class="page" id="archives"><div class="page-intro"><div class="eyebrow">THE CHRONICLES OF WISTERIA</div><h1>Kingdom Lore</h1><p>The history behind the crown, the coin, and the founding of the realm.</p></div><div class="panel lore"><div class="eyebrow">CHAPTER I</div><h2>The Founding of the Kingdom</h2><p>Before the kingdom's founding, MendoCoins flowed through the realm without a central treasury to account for every coin. A citizen's observation about money in circulation sparked an investigation of the kingdom's wealth.</p><p>The royal audit uncovered more than four trillion MendoCoins spread across 1,365 accounts. In response, Mad King Mendo proposed a one-time progressive founding tax to fund the Royal Treasury, Casino Vault, Royal Bank, and Stock Exchange Reserve.</p><p>Thus began the vision of Wisteria: a realm where wealth moves between citizens and institutions, instead of appearing from thin air.</p><div class="lore-signature">♛ &nbsp; By Order of the Crown</div></div></section>
-</main><footer>♛ &nbsp; MENDOOMOBB <span>AN UNOFFICIAL SITE FOR ALL AYEMENDOO TWITCH COMMANDS</span></footer>
-</div></div>
-<script src="script.js"></script>
-</body></html>
+  <script src="script.js"></script>
+</body>
+
+</html>
